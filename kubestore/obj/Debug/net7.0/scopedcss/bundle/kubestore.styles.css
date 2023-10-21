@@ -1,0 +1,120 @@
+/* _content/kubestore/Pages/Admin/Claims.cshtml.rz.scp.css */
+.adminBody[b-gstniyb4it] {
+    position: relative;
+}
+
+.bodyContent[b-gstniyb4it] {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 80%;
+}
+/* _content/kubestore/Pages/Admin/Index.cshtml.rz.scp.css */
+.adminBody[b-yev6vjwlux]{
+    position: relative;
+}
+
+.bodyContent[b-yev6vjwlux]{
+    position: absolute;
+    text-align: center;
+    top: 0;
+    right: 0;
+    width: 80%;
+}
+
+.infoTiles[b-yev6vjwlux]{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+/* _content/kubestore/Pages/Admin/Roles.cshtml.rz.scp.css */
+.adminBody[b-3yyl6e7xii] {
+    position: relative;
+}
+
+.bodyContent[b-3yyl6e7xii] {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 80%;
+}
+/* _content/kubestore/Pages/Admin/Users.cshtml.rz.scp.css */
+.adminBody[b-56tm9afq00] {
+    position: relative;
+}
+
+.bodyContent[b-56tm9afq00] {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 80%;
+}
+/* _content/kubestore/Pages/Shared/_Layout.cshtml.rz.scp.css */
+/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
+for details on configuring this project to bundle and minify static web assets. */
+
+a.navbar-brand[b-xkltulb2ll] {
+  white-space: normal;
+  text-align: center;
+  word-break: break-all;
+}
+
+a[b-xkltulb2ll] {
+  color: #0077cc;
+}
+
+.btn-primary[b-xkltulb2ll] {
+  color: #fff;
+  background-color: #1b6ec2;
+  border-color: #1861ac;
+}
+
+.nav-pills .nav-link.active[b-xkltulb2ll], .nav-pills .show > .nav-link[b-xkltulb2ll] {
+  color: #fff;
+  background-color: #1b6ec2;
+  border-color: #1861ac;
+}
+
+.border-top[b-xkltulb2ll] {
+  border-top: 1px solid #e5e5e5;
+}
+.border-bottom[b-xkltulb2ll] {
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.box-shadow[b-xkltulb2ll] {
+  box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
+}
+
+button.accept-policy[b-xkltulb2ll] {
+  font-size: 1rem;
+  line-height: inherit;
+}
+
+.footer[b-xkltulb2ll] {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  white-space: nowrap;
+  line-height: 60px;
+}
+/* _content/kubestore/Pages/Shared/_SideNavPartial.cshtml.rz.scp.css */
+
+.sideNavBar[b-xxlkgungbx] {
+    background-color: aliceblue;
+    width: 20%;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.sideNavBar ul li[b-xxlkgungbx] {
+    list-style: none;
+    font-weight: bold;
+    margin: 0.5rem 0;
+}
+
+.sideNavBar ul li a[b-xxlkgungbx] {
+    font-size: 1rem;
+    text-decoration: none;
+    color: black;
+}

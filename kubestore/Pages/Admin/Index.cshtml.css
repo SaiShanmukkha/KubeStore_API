@@ -1,0 +1,16 @@
+﻿.adminBody{
+    position: relative;
+}
+
+.bodyContent{
+    position: absolute;
+    text-align: center;
+    top: 0;
+    right: 0;
+    width: 80%;
+}
+
+.infoTiles{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
