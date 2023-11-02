@@ -30,7 +30,7 @@ namespace kubestore.Controllers
             }
             else
             {
-                var productList = await _context.Products.ToListAsync();
+                var productList = await _context.Products!.ToListAsync();
                 return Ok(productList);
 			}
         }
