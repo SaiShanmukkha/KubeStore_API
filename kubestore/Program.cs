@@ -1,5 +1,6 @@
 using kubestore.Data;
 using kubestore.Services;
+using kubestore.Services.Interfaces;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Routing;

@@ -1,9 +1,10 @@
 ﻿using kubestore.DTO;
+using kubestore.Services.Interfaces;
 using Microsoft.AspNetCore.Identity;
 
 namespace kubestore.Services
 {
-	public class KubeRoleService : IKubeRoleService
+    public class KubeRoleService : IKubeRoleService
 	{
 		private readonly RoleManager<IdentityRole> _roleManager;
 		public KubeRoleService(RoleManager<IdentityRole> roleManager) 

@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using kubestore.Data;
 
@@ -11,9 +12,11 @@ using kubestore.Data;
 namespace kubestore.Migrations
 {
     [DbContext(typeof(ApplicationDBContext))]
-    partial class ApplicationDBContextModelSnapshot : ModelSnapshot
+    [Migration("20231021040950_Hello")]
+    partial class Hello
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -220,7 +223,7 @@ namespace kubestore.Migrations
                     b.ToTable("AspNetUserTokens", (string)null);
                 });
 
-            modelBuilder.Entity("kubestore.Models.Category", b =>
+            modelBuilder.Entity("kubestore.Data.Category", b =>
                 {
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
@@ -240,7 +243,7 @@ namespace kubestore.Migrations
                     b.ToTable("Categories");
                 });
 
-            modelBuilder.Entity("kubestore.Models.Product", b =>
+            modelBuilder.Entity("kubestore.Data.Product", b =>
                 {
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
@@ -274,7 +277,7 @@ namespace kubestore.Migrations
                     b.ToTable("Products");
                 });
 
-            modelBuilder.Entity("kubestore.Models.Review", b =>
+            modelBuilder.Entity("kubestore.Data.Review", b =>
                 {
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
@@ -366,18 +369,18 @@ namespace kubestore.Migrations
                         .IsRequired();
                 });
 
-            modelBuilder.Entity("kubestore.Models.Category", b =>
+            modelBuilder.Entity("kubestore.Data.Category", b =>
                 {
-                    b.HasOne("kubestore.Models.Category", "category")
+                    b.HasOne("kubestore.Data.Category", "category")
                         .WithMany()
                         .HasForeignKey("categoryId");
 
                     b.Navigation("category");
                 });
 
-            modelBuilder.Entity("kubestore.Models.Product", b =>
+            modelBuilder.Entity("kubestore.Data.Product", b =>
                 {
-                    b.HasOne("kubestore.Models.Category", "Category")
+                    b.HasOne("kubestore.Data.Category", "Category")
                         .WithMany()
                         .HasForeignKey("CategoryId")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -386,9 +389,9 @@ namespace kubestore.Migrations
                     b.Navigation("Category");
                 });
 
-            modelBuilder.Entity("kubestore.Models.Review", b =>
+            modelBuilder.Entity("kubestore.Data.Review", b =>
                 {
-                    b.HasOne("kubestore.Models.Product", "Product")
+                    b.HasOne("kubestore.Data.Product", "Product")
                         .WithMany()
                         .HasForeignKey("ProductId")
                         .OnDelete(DeleteBehavior.Cascade)

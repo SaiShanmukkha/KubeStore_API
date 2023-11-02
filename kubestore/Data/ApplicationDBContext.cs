@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+﻿using kubestore.Models;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 
 namespace kubestore.Data
@@ -7,6 +8,11 @@ namespace kubestore.Data
     {
         public ApplicationDBContext(DbContextOptions options) : base(options) { }
 
-        // public DbSet<__MODEL_NAME__> __Table_Name__ { get; set; }
+        public DbSet<Category> Categories { get; set; }
+
+        public DbSet<Review> Reviews { get; set; }
+
+        public DbSet<Product> Products { get; set; }
+
     }
 }

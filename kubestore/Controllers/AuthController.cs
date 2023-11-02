@@ -1,5 +1,5 @@
 ﻿using kubestore.DTO;
-using kubestore.Services;
+using kubestore.Services.Interfaces;
 using Microsoft.AspNetCore.Mvc;
 
 namespace kubestore.Controllers

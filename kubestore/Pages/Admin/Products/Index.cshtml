@@ -1,0 +1,18 @@
+﻿@page
+@model kubestore.Pages.Admin.Products.IndexModel
+@{
+	ViewData["Title"] = "Admin | Products";
+	Layout = "_Layout";
+}
+<link rel="stylesheet" href="~/@(nameof(kubestore)).styles.css" />
+
+<div class="adminBody">
+	@{
+		Html.RenderPartial("_SideNavPartial");
+	}
+	<div class="bodyContent">
+		Products management
+	</div>
+</div>
+
+

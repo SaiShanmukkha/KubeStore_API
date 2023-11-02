@@ -1,6 +1,6 @@
 ﻿using kubestore.DTO;
 
-namespace kubestore.Services
+namespace kubestore.Services.Interfaces
 {
     public interface IKubeAuthService
     {
