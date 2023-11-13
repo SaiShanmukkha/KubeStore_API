@@ -8,11 +8,18 @@ namespace kubestore.Data
     {
         public ApplicationDBContext(DbContextOptions options) : base(options) { }
 
-        public DbSet<Category> Categories { get; set; }
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            base.OnModelCreating(modelBuilder);
 
-        public DbSet<Review> Reviews { get; set; }
+            
+        }
 
-        public DbSet<Product> Products { get; set; }
+        public virtual DbSet<Category> Categories { get; set; }
+
+        public virtual DbSet<Review> Reviews { get; set; }
+
+        public virtual DbSet<Product> Products { get; set; }
 
     }
 }

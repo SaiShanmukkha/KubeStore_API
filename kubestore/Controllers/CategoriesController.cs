@@ -7,85 +7,94 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using kubestore.Data;
 using kubestore.Models;
+using kubestore.Services.Interfaces;
 
 namespace kubestore.Controllers
 {
     [ApiController]
-	[Route("/api/products")]
-	public class ProductsController : ControllerBase
+	[Route("/api/categories")]
+	public class CategoriesController : Controller
     {
-        //// GET: Products
+        private readonly ICategoryService _categoryService;
+
+        public CategoriesController(ICategoryService categoryService)
+        {
+			_categoryService = categoryService;
+        }
+
+        // GET: Categories
         [HttpGet]
         public async Task<IActionResult> Index()
         {
-            return Ok("Nice");
+            var result = _categoryService.GetParentCategories();
+            return Ok("I am fetching data.");
         }
 
-        //// GET: Products/Details/5
+        //// GET: Categories/Details/5
         //public async Task<IActionResult> Details(Guid? id)
         //{
-        //    if (id == null || _context.Products == null)
+        //    if (id == null || _context.Categories == null)
         //    {
         //        return NotFound();
         //    }
 
-        //    var product = await _context.Products
+        //    var category = await _context.Categories
         //        .FirstOrDefaultAsync(m => m.Id == id);
-        //    if (product == null)
+        //    if (category == null)
         //    {
         //        return NotFound();
         //    }
 
-        //    //return View(product);
+        //    return View(category);
         //}
 
-        //// GET: Products/Create
+        //// GET: Categories/Create
         //public IActionResult Create()
         //{
-        //    //return View();
+        //    return View();
         //}
 
-        //// POST: Products/Create
-        //// To protect from overposting attacks, enable the specific properties you want to bind to.
+        // POST: Categories/Create
+        // To protect from overposting attacks, enable the specific properties you want to bind to.
         //// For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         //[HttpPost]
         //[ValidateAntiForgeryToken]
-        //public async Task<IActionResult> Create([Bind("Id,Name,Description,Images,Price,Quantity")] Product product)
+        //public async Task<IActionResult> Create([Bind("Id,Name")] Category category)
         //{
         //    if (ModelState.IsValid)
         //    {
-        //        product.Id = Guid.NewGuid();
-        //        _context.Add(product);
+        //        category.Id = Guid.NewGuid();
+        //        _context.Add(category);
         //        await _context.SaveChangesAsync();
         //        return RedirectToAction(nameof(Index));
         //    }
-        //    //return View(product);
+        //    return View(category);
         //}
 
-        //// GET: Products/Edit/5
+        // GET: Categories/Edit/5
         //public async Task<IActionResult> Edit(Guid? id)
         //{
-        //    if (id == null || _context.Products == null)
+        //    if (id == null || _context.Categories == null)
         //    {
         //        return NotFound();
         //    }
 
-        //    var product = await _context.Products.FindAsync(id);
-        //    if (product == null)
+        //    var category = await _context.Categories.FindAsync(id);
+        //    if (category == null)
         //    {
         //        return NotFound();
         //    }
-        //    //return View(product);
+        //    return View(category);
         //}
 
-        //// POST: Products/Edit/5
-        //// To protect from overposting attacks, enable the specific properties you want to bind to.
-        //// For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
+        // POST: Categories/Edit/5
+        // To protect from overposting attacks, enable the specific properties you want to bind to.
+        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         //[HttpPost]
         //[ValidateAntiForgeryToken]
-        //public async Task<IActionResult> Edit(Guid id, [Bind("Id,Name,Description,Images,Price,Quantity")] Product product)
+        //public async Task<IActionResult> Edit(Guid id, [Bind("Id,Name")] Category category)
         //{
-        //    if (id != product.Id)
+        //    if (id != category.Id)
         //    {
         //        return NotFound();
         //    }
@@ -94,12 +103,12 @@ namespace kubestore.Controllers
         //    {
         //        try
         //        {
-        //            _context.Update(product);
+        //            _context.Update(category);
         //            await _context.SaveChangesAsync();
         //        }
         //        catch (DbUpdateConcurrencyException)
         //        {
-        //            if (!ProductExists(product.Id))
+        //            if (!CategoryExists(category.Id))
         //            {
         //                return NotFound();
         //            }
@@ -110,49 +119,49 @@ namespace kubestore.Controllers
         //        }
         //        return RedirectToAction(nameof(Index));
         //    }
-        //    //return View(product);
+        //    return View(category);
         //}
 
-        //// GET: Products/Delete/5
+        // GET: Categories/Delete/5
         //public async Task<IActionResult> Delete(Guid? id)
         //{
-        //    if (id == null || _context.Products == null)
+        //    if (id == null || _context.Categories == null)
         //    {
         //        return NotFound();
         //    }
 
-        //    var product = await _context.Products
+        //    var category = await _context.Categories
         //        .FirstOrDefaultAsync(m => m.Id == id);
-        //    if (product == null)
+        //    if (category == null)
         //    {
         //        return NotFound();
         //    }
 
-        //    //return View(product);
+        //    return View(category);
         //}
 
-        //// POST: Products/Delete/5
+        // POST: Categories/Delete/5
         //[HttpPost, ActionName("Delete")]
         //[ValidateAntiForgeryToken]
         //public async Task<IActionResult> DeleteConfirmed(Guid id)
         //{
-        //    if (_context.Products == null)
+        //    if (_context.Categories == null)
         //    {
-        //        return Problem("Entity set 'ApplicationDBContext.Products'  is null.");
+        //        return Problem("Entity set 'ApplicationDBContext.Categories'  is null.");
         //    }
-        //    var product = await _context.Products.FindAsync(id);
-        //    if (product != null)
+        //    var category = await _context.Categories.FindAsync(id);
+        //    if (category != null)
         //    {
-        //        _context.Products.Remove(product);
+        //        _context.Categories.Remove(category);
         //    }
-
+            
         //    await _context.SaveChangesAsync();
         //    return RedirectToAction(nameof(Index));
         //}
 
-        //private bool ProductExists(Guid id)
+        //private bool CategoryExists(Guid id)
         //{
-        //  return (_context.Products?.Any(e => e.Id == id)).GetValueOrDefault();
+        //  return (_context.Categories?.Any(e => e.Id == id)).GetValueOrDefault();
         //}
     }
 }

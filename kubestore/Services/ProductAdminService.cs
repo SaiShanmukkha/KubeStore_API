@@ -4,7 +4,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace kubestore.Services
 {
-	public class ProductAdminService : IKubeProductAdminService
+	public class ProductAdminService : IProductAdminService
 	{
 		private readonly ApplicationDBContext _dbContext;
 		public ProductAdminService(ApplicationDBContext dBContext) 

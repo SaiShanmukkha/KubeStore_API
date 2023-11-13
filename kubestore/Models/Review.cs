@@ -4,22 +4,22 @@ namespace kubestore.Models
 {
     public class Review
     {
-        public Guid Id { get; set; }
+        public virtual Guid Id { get; set; }
 
-        public string Name { get; set; }
+        public virtual string Name { get; set; } 
 
-        public string Description { get; set; }
+        public virtual string Description { get; set; }
 
-        public int Rating { get; set; }
+        public virtual int Rating { get; set; }
 
-        public DateTime CreatedAt { get; set; }
+        public virtual DateTime CreatedAt { get; set; }
 
-        public DateTime UpdatedAt { get; set; }
+        public virtual DateTime UpdatedAt { get; set; }
 
-        public Product Product { get; set; }
+        public virtual Product Product { get; set; }
 
-        public IdentityUser? User { get; set; }
+        public virtual IdentityUser? User { get; set; }
 
-        public bool IsVerifiedPurchase { get; set; }
+        public virtual bool IsVerifiedPurchase { get; set; }
     }
 }

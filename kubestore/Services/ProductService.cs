@@ -1,20 +1,32 @@
-﻿using kubestore.Services.Interfaces;
+﻿using kubestore.Data;
+using kubestore.Models;
+using kubestore.Services.Interfaces;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 
 namespace kubestore.Services
 {
-	public class ProductService : IKubeProductService
+	public class ProductService : IProductService
 	{
-		public ProductService() { }
+		private readonly ApplicationDBContext _dbContext;
+		public ProductService(ApplicationDBContext dbContext) 
+		{
+			_dbContext = dbContext;
+		}
 
-		public IActionResult GetProduct(string productId)
+		public Task<Product> GetProduct(string productId)
 		{
 			throw new NotImplementedException();
 		}
 
-		public IActionResult GetProducts()
+		public async Task<List<Product>> GetProducts()
 		{
-			throw new NotImplementedException();
+			if (_dbContext.Products != null)
+			{
+				var productList = await _dbContext.Products.ToListAsync();
+				return productList;
+			}
+			return new List<Product>();
 		}
 	}
 }

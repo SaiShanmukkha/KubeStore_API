@@ -2,7 +2,7 @@
 
 namespace kubestore.Services.Interfaces
 {
-    public interface IKubeProductAdminService
+    public interface IProductAdminService
     {
         public IActionResult AddProduct();
         public IActionResult DeleteProduct();

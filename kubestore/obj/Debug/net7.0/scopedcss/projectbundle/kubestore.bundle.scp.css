@@ -1,3 +1,15 @@
+/* _content/kubestore/Pages/Admin/Categories/Index.cshtml.rz.scp.css */
+.adminBody[b-uqkjcbu5zr] {
+	position: relative;
+}
+
+.bodyContent[b-uqkjcbu5zr] {
+	position: absolute;
+	text-align: left;
+	top: 0;
+	right: 0;
+	width: 80%;
+}
 /* _content/kubestore/Pages/Admin/Claims.cshtml.rz.scp.css */
 .adminBody[b-gstniyb4it] {
     position: relative;
@@ -33,7 +45,7 @@
 
 .bodyContent[b-zpzw48h3qv] {
 	position: absolute;
-	text-align: center;
+	text-align: left;
 	top: 0;
 	right: 0;
 	width: 80%;

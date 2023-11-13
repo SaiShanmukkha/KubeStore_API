@@ -1,12 +1,13 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 
-namespace kubestore.Pages.Admin.Products
+namespace kubestore.Pages.Admin.Categories
 {
     public class IndexModel : PageModel
     {
 		private readonly IConfiguration _configuration;
 		private readonly String? _baseURL;
+
 		public IndexModel(IConfiguration configuration)
 		{
 			_configuration = configuration;
@@ -15,7 +16,7 @@ namespace kubestore.Pages.Admin.Products
 
 		public void OnGet()
         {
-			
+            
         }
     }
 }

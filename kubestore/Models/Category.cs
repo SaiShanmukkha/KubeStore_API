@@ -6,6 +6,6 @@
 
         public string Name { get; set; }
 
-        public Category? category { get; set; }
+        public virtual Category? category { get; set; }
     }
 }

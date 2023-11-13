@@ -5,7 +5,7 @@ using Microsoft.AspNetCore.Mvc;
 namespace kubestore.Controllers
 {
     [ApiController]
-    [Route("/api/[controller]")]
+    [Route("/api/auth")]
     public class AuthController : ControllerBase
     {
         private readonly IKubeAuthService _userService;

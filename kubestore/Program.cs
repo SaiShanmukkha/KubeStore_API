@@ -65,6 +65,9 @@ builder.Services.AddControllersWithViews();
 
 builder.Services.AddScoped<IKubeAuthService, KubeAuthService>();
 builder.Services.AddScoped<IKubeRoleService, KubeRoleService>();
+builder.Services.AddScoped<IProductService, ProductService>();
+builder.Services.AddScoped<IProductAdminService, ProductAdminService>();
+builder.Services.AddScoped<ICategoryService, CategoryService>();
 
 var app = builder.Build();
 // Configure the HTTP request pipeline.

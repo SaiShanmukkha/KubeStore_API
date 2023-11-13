@@ -9,10 +9,12 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Pages\Admin\Categories\Index.cshtml.css" />
     <None Remove="Pages\Admin\Products\Index.cshtml.css" />
   </ItemGroup>
 
   <ItemGroup>
+    <Content Include="Pages\Admin\Categories\Index.cshtml.css" />
     <Content Include="Pages\Admin\Products\Index.cshtml.css" />
   </ItemGroup>
 
