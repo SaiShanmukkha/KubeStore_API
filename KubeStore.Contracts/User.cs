@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace KubeStore.Contracts
 {
-	internal class User
+	public record User
 	{
+
 	}
 }

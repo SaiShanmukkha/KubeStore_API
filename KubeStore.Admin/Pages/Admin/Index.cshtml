@@ -1,0 +1,41 @@
+﻿@page
+@model KubeStore.Admin.Pages.Admin.AdminModel
+@{
+	ViewData["Title"] = "Admin Page";
+	Layout = "_Layout";
+}
+
+<div class="adminBody">
+	@{
+		Html.RenderPartial("_SideNavPartial");
+	}
+	<div class="bodyContent">
+		<div class="adminPageHeader">
+			<h2>Welcome to Admin Pannel</h2>
+			<p>Please select from Side Menu what you want to manage.</p>
+		</div>
+		<div class="infoTiles">
+			<div class="tile bg-info m-4 p-2 rounded-3">
+				<h5>Total Users</h5>
+				<strong>50</strong>
+			</div>
+			<div class="tile bg-warning m-4 p-2 rounded-3">
+				<h5>Total Users</h5>
+				<strong>50</strong>
+			</div>
+			<div class="tile bg-success m-4 p-2 rounded-3">
+				<h5>Total Users</h5>
+				<strong>50</strong>
+			</div>
+			<div class="tile bg-danger m-4 p-2 rounded-3">
+				<h5>Total Users</h5>
+				<strong>50</strong>
+			</div>
+			<div class="tile bg-primary m-4 p-2 rounded-3">
+				<h5>Total Users</h5>
+				<strong>50</strong>
+			</div>
+		</div>
+	</div>
+</div>
+

@@ -1,0 +1,33 @@
+﻿@page
+@model KubeStore.Admin.Pages.Admin.Categories.IndexModel
+@{
+	ViewData["Title"] = "Admin | Products";
+	Layout = "_Layout";
+}
+
+<div class="adminBody">
+	@{
+		Html.RenderPartial("_SideNavPartial");
+	}
+	<div class="bodyContent">
+		<div>
+			<h4>Add Category</h4>
+			<form>
+				<div>
+					<label>Category Name</label>
+					<input type="text" />
+					<span></span>
+				</div>
+
+				<div>
+					<label>Choose Parent Category</label>
+					<select>
+						<option>None</option>
+					</select>
+				</div>
+			</form>
+		</div>
+	</div>
+</div>
+
+

@@ -1,0 +1,17 @@
+﻿@page
+@model KubeStore.Admin.Pages.IndexModel
+@{
+    ViewData["Title"] = "Home page";
+    Layout = "_Layout";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome to KubeStore Command Center</h1>
+	<p>One Place to control all activities in KubeStore.</p>
+</div>
+
+
+<div>
+    <a href="/Admin" class="btn btn-info">Admin Panel</a>
+    <a href="/Swagger" class="btn btn-primary">API Panel</a>
+</div>

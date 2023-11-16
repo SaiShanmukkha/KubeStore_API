@@ -1,0 +1,144 @@
+/* _content/KubeStore.Admin/Pages/Admin/Categories/Index.cshtml.rz.scp.css */
+.adminBody[b-w8zp6o233w] {
+	position: relative;
+}
+
+.bodyContent[b-w8zp6o233w] {
+	position: absolute;
+	text-align: left;
+	top: 0;
+	right: 0;
+	width: 80%;
+}
+/* _content/KubeStore.Admin/Pages/Admin/Claims.cshtml.rz.scp.css */
+.adminBody[b-60m1a05gqt] {
+    position: relative;
+}
+
+.bodyContent[b-60m1a05gqt] {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 80%;
+}
+/* _content/KubeStore.Admin/Pages/Admin/Index.cshtml.rz.scp.css */
+.adminBody[b-n7cfjtwy0q]{
+    position: relative;
+}
+
+.bodyContent[b-n7cfjtwy0q]{
+    position: absolute;
+    text-align: center;
+    top: 0;
+    right: 0;
+    width: 80%;
+}
+
+.infoTiles[b-n7cfjtwy0q]{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+/* _content/KubeStore.Admin/Pages/Admin/Products/Index.cshtml.rz.scp.css */
+.adminBody[b-vghi7mrtj8] {
+	position: relative;
+}
+
+.bodyContent[b-vghi7mrtj8] {
+	position: absolute;
+	text-align: left;
+	top: 0;
+	right: 0;
+	width: 80%;
+}
+/* _content/KubeStore.Admin/Pages/Admin/Roles.cshtml.rz.scp.css */
+.adminBody[b-dc1lz96rvy] {
+    position: relative;
+}
+
+.bodyContent[b-dc1lz96rvy] {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 80%;
+}
+/* _content/KubeStore.Admin/Pages/Admin/Users.cshtml.rz.scp.css */
+.adminBody[b-af1cx8a598] {
+    position: relative;
+}
+
+.bodyContent[b-af1cx8a598] {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 80%;
+}
+/* _content/KubeStore.Admin/Pages/Shared/_Layout.cshtml.rz.scp.css */
+/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
+for details on configuring this project to bundle and minify static web assets. */
+
+a.navbar-brand[b-1mhlt5nura] {
+  white-space: normal;
+  text-align: center;
+  word-break: break-all;
+}
+
+a[b-1mhlt5nura] {
+  color: #0077cc;
+}
+
+.btn-primary[b-1mhlt5nura] {
+  color: #fff;
+  background-color: #1b6ec2;
+  border-color: #1861ac;
+}
+
+.nav-pills .nav-link.active[b-1mhlt5nura], .nav-pills .show > .nav-link[b-1mhlt5nura] {
+  color: #fff;
+  background-color: #1b6ec2;
+  border-color: #1861ac;
+}
+
+.border-top[b-1mhlt5nura] {
+  border-top: 1px solid #e5e5e5;
+}
+.border-bottom[b-1mhlt5nura] {
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.box-shadow[b-1mhlt5nura] {
+  box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
+}
+
+button.accept-policy[b-1mhlt5nura] {
+  font-size: 1rem;
+  line-height: inherit;
+}
+
+.footer[b-1mhlt5nura] {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  white-space: nowrap;
+  line-height: 60px;
+}
+/* _content/KubeStore.Admin/Pages/Shared/_SideNavPartial.cshtml.rz.scp.css */
+
+.sideNavBar[b-sn7uirjr1d] {
+    background-color: aliceblue;
+    width: 20%;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.sideNavBar ul li[b-sn7uirjr1d] {
+    list-style: none;
+    font-weight: bold;
+    margin: 0.5rem 0;
+}
+
+.sideNavBar ul li a[b-sn7uirjr1d] {
+    font-size: 1rem;
+    text-decoration: none;
+    color: black;
+}

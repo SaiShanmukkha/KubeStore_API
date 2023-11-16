@@ -1,0 +1,20 @@
+
+.sideNavBar[b-sn7uirjr1d] {
+    background-color: aliceblue;
+    width: 20%;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.sideNavBar ul li[b-sn7uirjr1d] {
+    list-style: none;
+    font-weight: bold;
+    margin: 0.5rem 0;
+}
+
+.sideNavBar ul li a[b-sn7uirjr1d] {
+    font-size: 1rem;
+    text-decoration: none;
+    color: black;
+}

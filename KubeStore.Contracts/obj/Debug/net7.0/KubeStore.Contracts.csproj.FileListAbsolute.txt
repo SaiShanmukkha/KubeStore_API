@@ -1,0 +1,4 @@
+H:\.NET Core\kubestore\KubeStore.Contracts\obj\Debug\net7.0\KubeStore.Contracts.GeneratedMSBuildEditorConfig.editorconfig
+H:\.NET Core\kubestore\KubeStore.Contracts\obj\Debug\net7.0\KubeStore.Contracts.AssemblyInfoInputs.cache
+H:\.NET Core\kubestore\KubeStore.Contracts\obj\Debug\net7.0\KubeStore.Contracts.AssemblyInfo.cs
+H:\.NET Core\kubestore\KubeStore.Contracts\obj\Debug\net7.0\KubeStore.Contracts.csproj.CoreCompileInputs.cache
