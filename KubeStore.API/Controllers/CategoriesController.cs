@@ -1,18 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.Rendering;
-using Microsoft.EntityFrameworkCore;
-using KubeStore.API.Data;
-using KubeStore.API.Models;
+﻿using Microsoft.AspNetCore.Mvc;
 using KubeStore.API.Services.Interfaces;
+using KubeStore.API.ViewModels;
 
 namespace KubeStore.API.Controllers
 {
-    [ApiController]
-	[Route("/api/categories")]
+	[ApiController]
+	[Route("/api/[controller]")]
+	[Produces("application/json")]
 	public class CategoriesController : Controller
     {
         private readonly ICategoryService _categoryService;
@@ -24,11 +18,36 @@ namespace KubeStore.API.Controllers
 
         // GET: Categories
         [HttpGet]
+        [Route("all")]
         public async Task<IActionResult> Index()
         {
-            var result = await _categoryService.GetParentCategories();
-            return Ok("I am fetching data.");
+            var result = await _categoryService.GetAllCategories();
+            return Ok(result);
         }
+
+
+        [HttpPost]
+        [Route("create")]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> create([FromBody] CategoryVM category)
+        {
+            if(ModelState.IsValid)
+            {
+                var resp = await _categoryService.CreateCategory(category);
+                if(resp.Success)
+                {
+                    return CreatedAtAction(nameof(Index), resp.Resource);
+                }
+                else
+                {
+                    return BadRequest("Failed to Create");
+                }
+            }
+
+            return BadRequest(ModelState);
+        }
+
+
 
         //// GET: Categories/Details/5
         //public async Task<IActionResult> Details(Guid? id)
@@ -154,7 +173,7 @@ namespace KubeStore.API.Controllers
         //    {
         //        _context.Categories.Remove(category);
         //    }
-            
+
         //    await _context.SaveChangesAsync();
         //    return RedirectToAction(nameof(Index));
         //}

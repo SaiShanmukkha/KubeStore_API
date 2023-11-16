@@ -1,18 +1,22 @@
 ﻿using KubeStore.API.Models;
+using KubeStore.API.Services.Communication;
 
 namespace KubeStore.API.Services.Interfaces
 {
     public interface ICategoryService
     {
-        public Task<List<Category>> GetParentCategories();
+        public Task<Response<Category>> CreateCategory(Category category);
 
-        //public Task<List<Category>> GetAllCategories(Category category);
+		public Task<Response<Category>> UpdateCategory(Category category);
 
-        //public Task<Category> GetCategoryById(int id);
+		public Task<IEnumerable<Category>> GetParentCategories();
 
-        //public Task<Category> GetCategoryByName(string name);
+        public Task<IEnumerable<Category>> GetAllSubCategories(Guid id);
 
-        public Category CreateCategory(Category category);
+		public Task<IEnumerable<Category>> GetAllCategories();
 
-    }
+		public Task<Response<Category>> GetCategoryById(Guid id);
+
+		public Task<Response<Category>> GetCategoryByName(string name);
+	}
 }
