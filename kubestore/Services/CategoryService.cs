@@ -24,5 +24,19 @@ namespace kubestore.Services
 
             return parentCategories;
         }
+
+        public async Task<List<Category>> GetAllCategories()
+        {
+            var categories = await _dbContext.Categories.ToListAsync();
+
+            return categories;
+        }
+
+        public async Task<List<Category>> GetAllSubCategories(Guid id)
+        {
+            var subCategories = await _dbContext.Categories.Where(x=>x.category != null && x.category.Id == id).ToListAsync();
+
+            return subCategories;
+        }
     }
 }

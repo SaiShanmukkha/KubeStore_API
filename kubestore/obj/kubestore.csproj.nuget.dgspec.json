@@ -1,15 +1,15 @@
 {
   "format": 1,
   "restore": {
-    "H:\\.NET Core\\kubestore\\kubestore\\kubestore.csproj": {}
+    "H:\\.NET Core\\kubestore\\kubestore\\kubeStore.csproj": {}
   },
   "projects": {
-    "H:\\.NET Core\\kubestore\\kubestore\\kubestore.csproj": {
+    "H:\\.NET Core\\kubestore\\kubestore\\kubeStore.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "H:\\.NET Core\\kubestore\\kubestore\\kubestore.csproj",
-        "projectName": "kubestore",
-        "projectPath": "H:\\.NET Core\\kubestore\\kubestore\\kubestore.csproj",
+        "projectUniqueName": "H:\\.NET Core\\kubestore\\kubestore\\kubeStore.csproj",
+        "projectName": "kubeStore",
+        "projectPath": "H:\\.NET Core\\kubestore\\kubestore\\kubeStore.csproj",
         "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
         "outputPath": "H:\\.NET Core\\kubestore\\kubestore\\obj\\",
         "projectStyle": "PackageReference",

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "BHs5RGdCWpdnRN3q3Q2eZE2he++CHrwZP3s3QkC5tzcv/tixkKwBZWxbwPs8suFvWNZtl7JXmhgqGcEKXs0Ucw==",
+  "dgSpecHash": "E+Ts6hUZFml1idySlL9Np47gQ4zDH/f+d3ZNVBbUWABsuSwgJMamgJtMwuYEX4NLYQ1AjUHemnhWCpBbGbCKHQ==",
   "success": true,
-  "projectFilePath": "H:\\.NET Core\\kubestore\\kubestore\\kubestore.csproj",
+  "projectFilePath": "H:\\.NET Core\\kubestore\\kubestore\\kubeStore.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\user\\.nuget\\packages\\azure.core\\1.25.0\\azure.core.1.25.0.nupkg.sha512",
     "C:\\Users\\user\\.nuget\\packages\\azure.identity\\1.7.0\\azure.identity.1.7.0.nupkg.sha512",

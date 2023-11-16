@@ -26,7 +26,7 @@ namespace kubestore.Controllers
         [HttpGet]
         public async Task<IActionResult> Index()
         {
-            var result = _categoryService.GetParentCategories();
+            var result = await _categoryService.GetParentCategories();
             return Ok("I am fetching data.");
         }
 
